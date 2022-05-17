@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/fengshangsheng/nice-react-template/issues"
   },
-  "homepage": "https://github.com/fengshangsheng/nice-react-template#readme"
+  "homepage": "https://github.com/fengshangsheng/nice-react-template#readme",
+  "dependencies": {
+    "react": "^18.1.0"
+  }
 }
