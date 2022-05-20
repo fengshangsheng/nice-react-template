@@ -1,0 +1,4 @@
+
+window.CONFIG = {
+  'xxx': 'xxxx'
+}
