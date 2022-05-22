@@ -18,7 +18,8 @@ module.exports = {
           return plugin;
         })
       }, webpackConfig.optimization.minimizer);
-
+      console.log(webpackConfig.module.rules);
+      /*
       // 去除因hash而改变的文件名
       webpackConfig.output = whenProd(() => {
         for (let key in webpackConfig.output) {
@@ -41,7 +42,7 @@ module.exports = {
           }
           return plugin;
         })
-      }, webpackConfig.output);
+      }, webpackConfig.plugins);
       webpackConfig.module.rules = whenProd(() => {
         return webpackConfig.module.rules.map((rule) => {
           if (rule?.oneOf) {
@@ -55,10 +56,9 @@ module.exports = {
           return rule;
         })
       }, webpackConfig.module.rules)
-
+      */
 
       return webpackConfig
     },
-  },
-  plugins: []
+  }
 }

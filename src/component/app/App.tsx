@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
-import '@/component/App.css';
+import '@/component/app/App.css';
+
+import StyleComponent from '@/component/styleComponents';
+import CssModule from '@/component/cssModule'
 
 function App() {
   const [count, triggerCount] = useState(0);
@@ -12,6 +15,8 @@ function App() {
         <p>Edit <code>src/App.tsx</code> and save to reload.</p>
         <a className="App-link">Learn React</a>
       </header>
+      <StyleComponent/>
+      <CssModule/>
     </div>
   );
 }
