@@ -6,7 +6,7 @@ const View = styled.div`
   top: 0;
   font-weight: bold;
   background-color: red;
-  width: 50vw;
+  width: 30vw;
   height: 100vh;
 `
 

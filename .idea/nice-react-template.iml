@@ -8,5 +8,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="React-Study-Demo" />
+    <orderEntry type="module" module-name="StudyNote" />
   </component>
 </module>
