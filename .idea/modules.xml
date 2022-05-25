@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://E:/WebCode/React-Study-Demo/.idea/React-Study-Demo.iml" filepath="E:/WebCode/React-Study-Demo/.idea/React-Study-Demo.iml" />
-      <module fileurl="file://E:/WebCode/StudyNote/.idea/StudyNote.iml" filepath="E:/WebCode/StudyNote/.idea/StudyNote.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/nice-react-template.iml" filepath="$PROJECT_DIR$/.idea/nice-react-template.iml" />
     </modules>
   </component>

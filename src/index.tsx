@@ -1,10 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import '@/index.css';
-import App from '@/component/app/App';
+import ReactDOM from 'react-dom';
+import { Popup } from 'nicetoolfn';
+import App from '@/views/app';
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
-
-root.render(<App/>);
+ReactDOM.render(<>
+  <App/>
+  <Popup ref={$refPopup}/>
+</>, document.getElementById('root'));
