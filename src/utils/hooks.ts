@@ -1,18 +1,18 @@
-import { useCallback, useContext, useLayoutEffect, useRef, useState } from 'react';
+import { useCallback, useContext, useEffect, useRef, useState } from 'react';
 import Interface from "@/interface/request.interface";
 import { postTask3 } from "@/utils/request";
 import { MobxContext } from "@/store";
 
 function useTask3<T>(params: any): [any, T | undefined, Function] {
   const [data, triggerData] = useState<T | undefined>();
-  const [reset, triggerReset] = useState<number>();
+  const [reset, triggerReset] = useState<number>(0);
   const refError = useRef();
 
   const resetFetch = useCallback(() => {
     triggerReset(performance.now());
   }, []);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     postTask3<T>('conf', params)
       .then(res => {
         refError.current = undefined;
@@ -21,7 +21,7 @@ function useTask3<T>(params: any): [any, T | undefined, Function] {
       .catch((res) => {
         refError.current = res;
       })
-  }, [reset])
+  }, [reset, params])
 
   return [refError.current, data, resetFetch];
 }

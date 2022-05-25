@@ -1,7 +1,8 @@
 const path = require('path');
 const TerserPlugin = require("terser-webpack-plugin");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const {whenDev, whenProd, when} = require('@craco/craco')
+const ImgCompress = require('nice-img-compress');
+const {whenDev, whenProd, when} = require('@craco/craco');
 
 module.exports = {
   webpack: {
@@ -18,7 +19,7 @@ module.exports = {
           return plugin;
         })
       }, webpackConfig.optimization.minimizer);
-      console.log(webpackConfig.module.rules);
+      console.log(webpackConfig);
       /*
       // 去除因hash而改变的文件名
       webpackConfig.output = whenProd(() => {
@@ -57,6 +58,13 @@ module.exports = {
         })
       }, webpackConfig.module.rules)
       */
+
+      webpackConfig.plugins = whenProd(() => {
+        return [
+          ...webpackConfig.plugins,
+          new ImgCompress()
+        ]
+      }, webpackConfig.plugins)
 
       return webpackConfig
     },

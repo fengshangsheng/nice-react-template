@@ -39,6 +39,7 @@ class Operate {
     makeAutoObservable(this)
   }
 
+
 }
 
 class RootStore {

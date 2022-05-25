@@ -9,6 +9,9 @@ function Index() {
 
   return (
     <View>
+      <h1>{String(store.isLogin)}</h1>
+      <button onClick={() => store.setLogin(!store.isLogin)}>change login</button>
+      <h2>{count}</h2>
       <button onClick={() => handleCount(count + 1)}>add+1</button>
     </View>
   );
